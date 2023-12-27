@@ -1,0 +1,85 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 60%;
+    margin: 70px auto 0;
+    overflow: hidden;
+
+    &__title {
+        font-size: 40px;
+        width: 100%;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        margin: 0;
+    }
+
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+        height: 300px;
+        display: flex;
+        transition: transform 1s ease-in-out;
+    }
+
+    &__slide {
+        display: flex;
+        flex: 1 0 100%;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 30px;
+    }
+
+    &__content {
+        margin: 0;
+        color: #000;
+        font-size: 100px;
+    }
+
+    &__button {
+        color: #fff;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        width: 20px;
+        position: absolute;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    &__button-left {
+        top: 360px;
+        left: 15%;
+    }
+
+    &__button-right {
+        top: 360px;
+        right: 15%;
+    }
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+        margin: 10px 0;
+        gap: 10px;
+    }
+
+    &__dot {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 0;
+        border: none;
+        height: 10px;
+        width: 10px;
+        opacity: 0.4;
+        cursor: pointer;
+    }
+
+    &__dot_selected {
+        opacity: 1;
+    }
+}

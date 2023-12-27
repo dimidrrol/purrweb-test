@@ -1,0 +1,162 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    position: relative;
+
+    &__title {
+        color: white;
+        font-size: 96px;
+        font-style: normal;
+        font-weight: 700;
+        margin: 0 200px 0 60px;
+    }
+
+    &__container {
+        margin: 80px 160px 36px 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__subtitle-container {
+        max-width: 397px;
+        position: relative;
+        height: 135px;
+    }
+
+    &__subtitle {
+        position: relative;
+        color: white;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+        z-index: 2;
+    }
+
+    &__purple-line {
+        position: absolute;
+        bottom: -5px;
+        right: -15px;
+    }
+
+    &__info-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 70px;
+    }
+
+    &__item {
+        max-width: 321px;
+    }
+
+    &__item-title {
+        color: white;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        margin: 10px 0 20px;
+    }
+
+    &__item-description {
+        color: white;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    &__picture {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .about {
+        &__container {
+            margin: 80px 80px 36px 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .about {
+        &__container {
+            margin: 80px 40px 36px 30px;
+        }
+
+        &__info-container {
+            gap: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .about {
+        width: 95%;
+        margin: 22px auto 0;
+
+        &__title {
+            width: 100%;
+            margin: 0;
+        }
+
+        &__container {
+            flex-direction: column;
+            width: 100%;
+            margin: 30px 0 40px;
+        }
+
+        &__info-container {
+            grid-template-columns: repeat(1, 1fr);
+            margin-top: 40px;
+        }
+
+        &__item {
+            max-width: 100%;
+        }
+
+        &__picture {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        &__title {
+            font-size: 40px;
+        }
+
+        &__subtitle-container {
+            max-width: 268px;
+            max-height: 87px;
+        }
+
+        &__subtitle {
+            font-size: 24px;
+        }
+
+        &__purple-line {
+            width: 235px;
+            height: 29px;
+            right: -5px;
+        }
+
+        &__info-container {
+            gap: 60px;
+        }
+
+        &__item-title {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        &__item-description {
+            font-size: 16px;
+        }
+    }
+}

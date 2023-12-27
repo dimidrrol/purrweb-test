@@ -1,0 +1,185 @@
+.footer {
+    width: 91.6%;
+    margin: 0 auto;
+    padding: 40px 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #444;
+        max-height: 57px;
+        padding-bottom: 30px;
+    }
+
+    &__navigate-desktop {
+        display: flex;
+        width: 21.5%;
+        justify-content: space-between;
+    }
+
+    &__navigate-mobile {
+        display: none;
+    }
+
+    &__button {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    &__buttons {
+        width: 47.9%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__stores {
+        width: 64.8%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__store {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        width: 47.3%;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+    }
+
+    &__store_type_apple-store {
+        background-image: url('../../images/appstore.svg');
+    }
+
+    &__store_type_google-store {
+        background-image: url('../../images/googleplay.svg');
+    }
+
+    &__underline {
+        display: flex;
+        justify-content: space-between;
+        max-height: 20px;
+    }
+
+    &__copy {
+        width: 35%;
+        margin: 0;
+        color: #B9B9B9;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+    }
+
+    &__navigation {
+        width: 35.6%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__navigation-button {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        color: #B9B9B9;
+        text-decoration-line: underline;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .footer {
+        &__logo {
+            width: 10%;
+        }
+
+        &__button {
+            font-size: 16px;
+        }
+
+        &__buttons {
+            width: 50%;
+        }
+
+        &__stores {
+            width: 45%;
+        }
+
+        &__store {
+            background-size: contain;
+        }
+
+        &__navigation {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        &__links {
+            flex-direction: column;
+            max-height: fit-content;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+
+        &__logo {
+            width: 124px;
+        }
+
+        &__navigate-desktop {
+            display: none;
+        }
+
+        &__navigate-mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &__button {
+            text-align: start;
+        }
+
+        &__buttons {
+            width: 60%;
+            flex-direction: column;
+            max-height: fit-content;
+            gap: 40px;
+        }
+
+        &__stores {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__store {
+            height: 57px;
+            width: 194px;
+            background-size: cover;
+        }
+
+        &__navigation {
+            display: none;
+        }
+
+        &__copy {
+            width: 95%;
+        }
+    }
+}

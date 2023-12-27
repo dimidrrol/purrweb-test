@@ -1,0 +1,71 @@
+.advantage {
+    background-color: #954CED;
+    display: flex;
+    justify-content: center;
+
+    &__text-container {
+        display: flex;
+        gap: 100px;
+        margin: 40px 0;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-width: 217px;
+    }
+
+    &__title {
+        color: #FFF;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__description {
+        color: #FFF;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .advantage {
+        &__text-container {
+            gap: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .advantage {
+        &__text-container {
+            flex-direction: column;
+        }
+
+        &__item {
+            max-width: 346px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .advantage {
+        &__item {
+            flex-direction: row;
+        }
+
+        &__title {
+            font-size: 40px;
+        }
+
+        &__description {
+            font-size: 20px;
+            align-self: center;
+        }
+    }
+}

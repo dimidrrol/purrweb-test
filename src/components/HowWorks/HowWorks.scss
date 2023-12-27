@@ -1,0 +1,129 @@
+@keyframes fly-right {
+    0% {
+        transform: translate(-160%, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fly-left {
+    0% {
+        transform: translate(100%, 0);
+    }
+
+    100% {
+        transform: translate(-160%, 0);
+    }
+}
+
+.how-works {
+    margin: 100px 0 0;
+    position: relative;
+
+    &__phone {
+        position: absolute;
+        top: 0;
+        left: 40%;
+        z-index: 2;
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 68px;
+        margin: 40px 0;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &__text {
+        display: flex;
+        gap: 20px;
+        font-size: 128px;
+        font-style: normal;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__animation-right {
+        position: relative;
+        padding-left: 200%;
+        animation: fly-right 10s linear infinite;
+    }
+
+    &__animation-left {
+        position: relative;
+        padding-right: 100%;
+        animation: fly-left 10s linear infinite;
+    }
+
+    &__1row {
+        color: #2FDBBC;
+    }
+
+    &__2row {
+        color: #A64CED;
+    }
+
+    &__3row {
+        color: #FFAA4C;
+    }
+
+    &__text-shadow {
+        font-size: 128px;
+        font-style: normal;
+        font-weight: 700;
+        color: #181818;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.39);
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .how-works {
+        &__phone {
+            left: 35%;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .how-works {
+        &__phone {
+            left: 30%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .how-works {
+        &__phone {
+            width: 228px;
+            height: 461px;
+            left: 30%;
+        }
+
+        &__text {
+            font-size: 48px;
+        }
+
+        &__text-shadow {
+            font-size: 48px;
+        }
+
+        &__text-container {
+            gap: 93px;
+            margin: 61px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .how-works {
+        &__phone {
+            left: 20%;
+        }
+    }
+}

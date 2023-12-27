@@ -1,0 +1,71 @@
+.popup-navigate {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #181818;
+    z-index: 4;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.2s, opacity 0.2s linear;
+
+    &::before {
+        content: "";
+        background-color: #181818;
+        position: fixed;
+        margin: 0 auto;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    &_opened {
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0.2s, opacity 0.2s linear;
+    }
+
+    &__buttons {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 177px;
+        padding: 196px 0 0;
+    }
+
+    &__close-button {
+        position: absolute;
+        top: 15px;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        background-image: url(../../images/Close-button.svg);
+        cursor: pointer;
+    }
+
+    &__navigate {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__button {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        color: #fff;
+        text-align: start;
+        cursor: pointer;
+    }
+}
